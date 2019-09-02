@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="lian1.css"/>
+	</head>
+	<body>
+		<div class="main">
+			<div class="content">
+				<div class="top">
+					<input type="text" name="" id="shuru" value="" placeholder="请输入想说的秘密"/>
+					<input type="button" id="tijiao" value="提交留言" />
+				</div>
+				<div class="container">
+					<p>留言板</p>
+					<ul id="main">
+						<li>保管好</li>
+						<li>就恢复环境</li>
+						<li>好人的话</li>
+						<li>他就发过节费</li>
+						<li>和对方回复</li>
+						<li>南京房价能否</li>
+						<li>他就发过节费</li>
+						<li>和对方回复</li>
+						<li>南京房价能否</li>
+						<li>他就发过节费</li>
+						<li>和对方回复</li>
+						<li>南京房价能否</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+					var oshuru=document.getElementById("shuru");
+					var otijiao=document.getElementById("tijiao");
+					var omain=document.getElementById("main");
+					otijiao.onclick=function(){
+						omain.innerHTML="<li>"+oshuru.value+"</li>"+omain.innerHTML
+						oshuru.value=""
+					}	
+				</script>
+	</body>
+</html>

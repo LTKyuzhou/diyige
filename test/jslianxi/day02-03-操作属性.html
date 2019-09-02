@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			#box{
+				width: 300px;
+				height: 200px;
+				border: 2px solid #333333;
+				margin-top: 10px;
+				overflow: auto;
+				word-wrap: break-word;  /*强制长单词换行*/
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" value="" id="text"/>
+		<input type="button" id="btn" value="按钮" />
+		<div id="box">
+			<p>123456</p>
+			<p>abc</p>
+		</div>
+		<script type="text/javascript">
+			var oBtn=document.getElementById("btn"); //获取按钮
+			var oText=document.getElementById("text"); //获取输入框
+			var oBox=document.getElementById("box"); //获取id为box的盒子
+			
+			//alert()
+			//需求：1、点击按钮oBtn获取输入框oText的value值
+				  //2、把输入中输入的值通过点击按钮oBtn事件，插入在id为box的盒子中
+			oBtn.onclick=function(){
+				//oText.value 输入框中输入的值
+				//alert(oText.value)
+				//innerText内部文本
+				//innerHTML内部html代码
+				//oBox.innerText=oText.value;
+				//alert(oBox.innerText)
+				//oBox.innerText=oBox.innerText+oText.value+"<br />"
+				//alert(oBox.innerHTML)
+				//'<p>dhfajk</p>'
+				oBox.innerHTML="<p>"+oText.value+"</p>"+oBox.innerHTML				oText.value=""
+			}
+			
+			
+		</script>
+	</body>
+</html>

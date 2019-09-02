@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//if语句  条件判断语句
+				//语法：
+				//1、if(条件){ 代码段 }
+					//如果条件为true，执行代码段语句
+			var num=1;
+			if(num>5){
+				//alert("num大于5");
+			}
+				//2、if(条件){ 代码段1 }else{ 代码段2 }
+					//如果条件为true，执行代码段1，否则执行代码段2
+					
+			if(num>2){
+				//alert("num大于2");
+			}else{
+				//alert(num)
+			}
+				//3、if(条件1){代码段1}else if(条件2){代码段2}...else{代码段n}
+			/*
+			var num=98;
+			if(num>=90){
+				alert("优秀");
+			}else if(num>=80){
+				alert("良好");
+			}else if(num>70){
+				alert("中等")
+			}else if(num>=60){
+				alert("及格")
+			}else{
+				alert("该提问你了")
+			}
+			*/
+			//总结：
+				//if条件语句中只要条件满足就执行对应的代码段，后面的内容就不在执行
+			
+			
+			//拓展： 三目运算或者三元运算  ?:
+				//说明：
+					//1、?前面的是if的条件   num>90
+					//2、?后面的:前面的是代码段1
+					//3、:后面的是代码段2
+			
+			var num=100;
+//			if(num>90){
+//				alert("优秀") //代码段1
+//			}else{
+//				alert("其他") //代码段2
+//			}
+			//上面的if else等价于下面的代码
+			//num>90?alert("优秀"):alert("其他")
+			
+			
+//			if(num>90){
+//				var num=90;
+//			}else{
+//				var num="其他"
+//			}
+			//上面的if else等价于下面的代码
+			var num=num>90?90:"其他"
+			alert(num);
+			
+			
+			
+		</script>
+	</body>
+</html>

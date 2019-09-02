@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//算术运算符：+、-、*、/、%
+			
+			//1、+ 加
+				//作用：
+					//1、代数求和
+					//2、数字加上字符串，得到字符串
+					//3、数字加上空的字符串，可以将数字转换成字符串
+					//4、数字加上NaN，得到NaN
+			
+			console.log(1+1); //2
+			console.log(1+"1"); //字符串11
+			console.log(typeof (1+"1")); //
+			console.log(1+NaN); //NaN
+			
+			//- 减
+				//作用：
+					//1、代数求差
+					//2、减号，可以将字符类型的数字转换成数值，我们成为隐式类型转换
+					//3、数字减NaN，得到NaN
+					//4、可以将布尔值转成数值在进行运算
+					//5、1-null可以将null转换为布尔值false之后再转换成数值进行运算
+			console.log(1-1); //0
+			console.log(1-"1");
+			console.log(typeof (1-"1"));
+			console.log(1-NaN); //NaN
+			console.log(1-true);//0
+			console.log(1-null);//1
+			
+			//* 乘
+				//作用：
+					//1、数和数的乘积
+					//2、乘号，可以将字符类型的数字转换成数值，我们成为隐式类型转换
+					//3、数字乘NaN，得到NaN
+					//4、可以将布尔值转成数值在进行运算
+					//5、2*null可以将null转换为布尔值false之后再转换成数值进行运算
+			console.log(2*2);//4
+			console.log(2*'2');//4
+			console.log(2*NaN);//NaN
+			console.log(2*true);//2
+			console.log(2*null);//0
+			
+			// /、除 
+				//同乘作用
+			console.log(2/2);//1
+			console.log(2/'2');//1
+			console.log(2/NaN);//NaN
+			console.log(2/true);//2
+			console.log(2/null);//Infinity 无穷大
+			
+			//% 求余、求模
+			
+			console.log(1%2); //1
+			console.log(2%'2'); //0
+			
+			//总结：
+				//+ 
+					//字符串连接
+					//数字求和
+				//-、*、/、%
+					//隐式类型转换
+					//代数运算
+			
+			
+		</script>
+	</body>
+</html>

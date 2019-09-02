@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//关系运算符：
+				//大小关系运算符：>、 >= 、<、 <=、 !=
+			console.log(1<2); //true
+			console.log(3<2); //false
+			console.log(3!=2); //true
+			
+			console.log(1<'2');
+			console.log(3>'2');
+			
+			console.log("a"<"b") //true  //a=97 b=98
+			
+			console.log(1<"你好") //没法比较
+			
+			console.log(1!=NaN)//true
+			
+			//等值关系
+			//=	        赋值
+			//==   相等---》只要值相等就为true
+			//===  全等---》不但值要相等，数据类型也要相同
+			
+			console.log(1=='1'); //true
+			console.log(1==='1'); //false
+			
+			console.log(NaN==NaN); //false
+			
+			console.log(0/0) //NaN
+			console.log(1*"abc") //NaN
+			
+			console.log(NaN==NaN); //false
+			console.log(undefined==null); //true
+			//undefined遇到==转成false--》0
+			//null遇到==转成false--》0
+			
+			//总结: < > <= <= ==都有隐式类型转换作用
+			
+		</script>
+	</body>
+</html>

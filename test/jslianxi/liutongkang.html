@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wei{
+				width: 600px;
+				height: 600px;
+				background: red;
+				margin: 50px auto;
+			}
+			.wei:hover i{
+				color:brown;
+			}
+			.xiaoshi{
+				width: 500px;
+				height: 500px;
+				background: blue;
+				margin: 25px 50px;
+				display: none;
+			}
+			.xiaoshi:hover i{
+				color: chartreuse;
+			}
+			.wahaha{
+				width: 100px;
+				height: 100px;
+				background: black;
+				color: darkviolet;
+				display: inline-block;
+				border-radius:50%;
+				float: left;
+			}
+			.wahaha i{
+				width: 100px;
+				height: 30px;
+				display: inline-block;
+				margin: 38px -1px 10px;
+				text-align: center;
+				cursor: pointer;
+			}
+			p{
+				display: inline-block;
+				margin: 0px 5px;
+				text-align: center;
+			}
+			#fuhao i{
+			margin: 28px -1px 10px;
+			}
+			.wahaha:hover i{
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wei">
+			<input type="button" name="" value="点我带你去见爸爸" id="but"/>
+			<div class="xiaoshi" id="haha">
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha left" id="fuhao"><i>我是你爸爸<p>不点就不走</p><p>了</p></i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+				<div class="wahaha"><i>我是你爸爸</i></div>
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			var oBut=document.getElementById("but");
+			var ohaha=document.getElementById("haha");
+			var ofuhao=document.getElementById("fuhao");
+		    	oBut.onclick=function(){
+		    		ohaha.style.display="block";
+		    	}
+		    	ofuhao.onclick=function(){
+		    		ohaha.style.display="none";
+		    	}
+		</script>
+	</body>
+</html>

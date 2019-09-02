@@ -1,0 +1,66 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.main{
+	width: 600px;
+	height: 600px;
+	margin: 0px auto;
+	border: solid 1px;
+}
+.content{
+	width: 500px;
+	height: 500px;
+	margin: 0px auto;
+	border: solid 1px;
+}
+.top{
+	width: 500px;
+	height: 50px;
+	border: solid 1px;
+}
+#shuru{
+	width: 300px;
+	height: 40px;
+	float: left;
+	border: solid 1px;
+}
+#shuru:hover{
+	border: solid 5px red;
+}
+#tijiao{
+	width: 150px;
+	height: 40px;
+	float: right;
+	border: solid 1px;
+}
+p{
+	width: 500px;
+	height: 40px;
+	line-height: 32px;
+	text-align: center;
+	border: solid 1px;
+	
+	background-color: white;
+}
+ul{
+	width: 500px;
+	height: 400px;
+	overflow: auto;
+}
+li{
+	width: 470px;
+	height: 40px;
+	list-style: none;
+	text-indent: 10px;
+	line-height: 38px;
+	border: solid 1px;
+	padding-right: 10px;
+}
+li:nth-child(2n){
+	text-align: right;
+}
+li:nth-child(2n+1){
+	text-align: left;
+}
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			li{
+				list-style: none;
+			}
+			.banner{
+				width: 600px;
+				height: 400px;
+				background: #ccc;
+				margin: 0px auto;
+				position: relative;
+			}
+			.banner .prev,.banner .next{
+				width: 50px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				top: 50%;
+				margin-top: -50px;
+				cursor: pointer;
+			}
+			.banner .next{
+				right: 0px;
+			}
+			.banner .dots{
+				width: 200px;
+				height: 20px;
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				margin-left: -100px;
+				text-align: center;
+			}
+			.banner .dots li{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: #333333;
+				display: inline-block;
+				margin: 0px 5px;
+				cursor: pointer;
+			}
+			.banner .dots .active{
+				background: yellow;
+			}
+			.banner .banner-img li{
+				width: 600px;
+				height: 400px;
+				background: pink;
+				font-size: 50px;
+				text-align: center;
+				line-height: 400px;
+				font-weight: bold;
+				display: none;
+			}
+			.banner .banner-img .now{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="banner">
+			<ul class="banner-img" id="bannerImg">
+				<li class="now">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<div class="prev" id="prev"></div>
+			<div class="next" id="next"></div>
+			<ul class="dots" id="dots">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			//获取元素
+				//getElementById		获取到的是唯一的
+				//getElementsByTagName  获取到的是一个集合，集合有length，也有索引从0开始
+				//获取banner图片
+				var bannerImg=document.getElementById("bannerImg"); //唯一的
+				var oLiImg=bannerImg.getElementsByTagName("li");//集合
+				
+				//获取左右按钮
+				var oPrev=document.getElementById("prev"); //唯一
+				var oNext=document.getElementById("next"); //唯一
+				
+				//获取指示点
+				var oDots=document.getElementById("dots"); //唯一
+				var oLiDots=oDots.getElementsByTagName("li"); //集合
+				
+				
+				//点击next按钮
+				var num=0;
+				oNext.onclick=function(){
+					num++;
+					for(var i=0;i<3;i++){ //去掉所有oLiImg上边的now样式
+						oLiImg[i].className="";
+						oLiDots[i].className="";
+					}
+					if(num==3){ //条件判断循环数字
+						num=0;
+					}
+					oLiImg[num].className="now";  //给当前的oLiImg条件now样式
+					oLiDots[num].className="active";
+				}
+				
+				//点击prev按钮
+				oPrev.onclick=function(){
+					num--;
+					for(var i=0;i<3;i++){ //去掉所有oLiImg上边的now样式
+						oLiImg[i].className="";
+						oLiDots[i].className="";
+					}
+					if(num==-1){
+						num=2
+					}
+					oLiImg[num].className="now";  //给当前的oLiImg条件now样式
+					oLiDots[num].className="active";
+				}
+			
+				//点击指示点
+				for(var i=0;i<oLiDots.length;i++){
+					oLiDots[i].index=i; //给指示点上边分发一个索引值
+					oLiDots[i].onclick=function(){
+						for(var i=0;i<3;i++){ //去掉所有oLiImg上边的now样式
+							oLiImg[i].className="";
+							oLiDots[i].className="";
+						}
+						this.className="active";
+						oLiImg[this.index].className="now";
+						num=this.index;  //让num和this.index关联
+					}
+				}
+				
+				//定时器
+//				setInterval(function(){
+//					oNext.onclick()
+//				},2000)
+				
+		</script>
+	</body>
+</html>

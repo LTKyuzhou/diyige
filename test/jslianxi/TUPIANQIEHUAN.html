@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.wei {
+				width: 1200px;
+				height: 600px;
+				margin: 0px auto;
+				position: relative;
+				border: solid;
+			}
+			
+			.wei .left,
+			.wei .right {
+				width: 50px;
+				height: 100px;
+				font-size: 78px;
+				line-height: 89px;
+				position: absolute;
+				top: 50%;
+				margin-top: -50px;
+				color: white;
+				background-color: red;
+				/*border: solid;*/
+			}
+			
+			.wei .right {
+				right: 0px;
+				background-color: red;
+			}
+			
+			.wei .bottom {
+				width: 300px;
+				height: 30px;
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				border: solid;
+				margin-left: -150px;
+				text-align: center;
+			}
+			
+			.wei .bottom li {
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				list-style: none;
+				display: inline-block;
+				border: solid;
+				background-color: white;
+			}
+			
+			.wei .bottom .li {
+				background-color: red;
+			}
+			
+			.wei .beijing img {
+				width: 1200px;
+				height: 600px;
+				display: none;
+				border: solid;
+			}
+			
+			.wei .beijing .img {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wei">
+			<div class="beijing" id="beijing">
+				<img src="img/images/banner.jpg" class="img" />
+				<img src="img/banner.jpg" />
+				<img src="img/flag.jpg" />
+			</div>
+			<div class="left" id="left">
+				< </div>
+					<div class="right" id="right">
+						>
+					</div>
+					<ul class="bottom" id="bottom">
+						<li class="li"></li>
+						<li></li>
+						<li></li>
+					</ul>
+			</div>
+			<script type="text/javascript">
+				//				大图
+				var obeijing = document.getElementById("beijing");
+				var oimg = obeijing.getElementsByTagName("img");
+				//				底部圆点
+				var obottom = document.getElementById("bottom");
+				var oli = obottom.getElementsByTagName("li");
+				//				左右按键
+				var oleft = document.getElementById("left");
+				var oright = document.getElementById("right");
+				var num = 0;
+				oright.onclick = function() {
+					num++;
+					for(var i = 0; i < oli.length; i++) {
+						oli[i].className = "";
+						oimg[i].className = "";
+					}
+					if(num == 3) {
+						num = 0;
+					}
+					oli[num].className = "li";
+					oimg[num].className = "img";
+				}
+				oleft.onclick = function() {
+					num--;
+					for(var i = 0; i < oli.length; i++) {
+						oli[i].className = "";
+						oimg[i].className = "";
+					}
+					if(num == -1) {
+						num = 2;
+					}
+					oli[num].className = "li";
+					oimg[num].className = "img";
+				}
+				for(var i = 0; i < oli.length; i++) {
+					oli[i].olis = i;
+					oli[i].onclick = function() {
+						for(var i = 0; i < 3; i++) {
+							oli[i].className = "";
+							oimg[i].className = "";
+						}
+						this.className = "li";
+						oimg[this.olis].className = "img";
+						num = this.olis;
+					}
+				}
+			</script>
+	</body>
+
+</html>
